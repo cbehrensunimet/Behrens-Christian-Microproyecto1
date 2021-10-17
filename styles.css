@@ -85,7 +85,7 @@
     top: calc(100% - 70px);
 }
 
-.experience-container .subtitulo{
+.subtitulo{
     background-color: var(--primarycolor);
     color: white;
     height: 80px;
@@ -127,4 +127,24 @@
     position: absolute;
     right: 5%;
     
+}
+
+.abme{
+    display: inline-grid;
+    grid-template-columns: auto auto ;
+}
+
+.abme .gridcontainer{
+    padding: 40px;
+    font-size: 24px;
+}
+
+.abme .gridcontainer h1{
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.abme .gridcontainer ul{
+    list-style: none;
+    margin-bottom: 20px;
 }
