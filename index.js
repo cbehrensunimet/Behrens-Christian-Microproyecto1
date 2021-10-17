@@ -1,6 +1,31 @@
 var imagenes =["/fotos/hero1.jpg","/fotos/hero2.jpg","/fotos/hero3.jpg"],
      cont = 0;
 
+const skills=[{
+    "name": "Python",
+    "value": 95},
+    {
+        "name": "Java",
+        "value": 90
+    },
+    {
+        "name": "Javascript",
+        "value": 55
+    },
+    {
+        "name": "HTML",
+        "value": 65
+    },
+    {
+        "name": "CSS",
+        "value": 70
+    }
+    
+]   
+
+const skillSection = document.getElementById("skillsection");
+const progressBars = document.querySelectorAll(".progressbar")
+
 function carrousel(contenedor){
     contenedor.addEventListener("click", e=> {
         let atras = contenedor.querySelector('.atras'),
@@ -35,3 +60,36 @@ document.addEventListener("DOMContentLoaded",()=>{
     let container = document.querySelector('.hero-container');
     carrousel(container);
 });
+
+function showProgress(){
+    console.log("show");
+    progressBars.forEach(progressBar =>{
+        for (let i= 0; i < skills.length; i++) {
+
+            let value = skills[i]
+            if(progressBar.id==skills[i].name){
+                progressBar.style.width = `${skills[i].value}%`;
+                progressBar.style.opacity = 1;
+                progressBar.innerHTML = `${skills[i].value}%`;
+            }
+            
+        }
+    })
+}
+function hideProgress(){
+    console.log("hide");
+    progressBars.forEach(progressBar=>{
+        progressBar.style.width = 0;
+        progressBar.style.opacity = 0;
+    })
+
+}
+window.addEventListener('scroll', ()=>{
+    const sectionPos = skillSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight;
+    if(sectionPos< screenPos){
+        showProgress();
+    }else{
+        hideProgress();
+    }
+})
