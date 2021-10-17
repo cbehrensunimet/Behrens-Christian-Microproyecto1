@@ -10,7 +10,7 @@ const skills=[{
     },
     {
         "name": "Javascript",
-        "value": 55
+        "value": 60
     },
     {
         "name": "HTML",
@@ -25,6 +25,12 @@ const skills=[{
 
 const skillSection = document.getElementById("skillsection");
 const progressBars = document.querySelectorAll(".progressbar")
+const nombre = document.getElementById("name");
+const mail = document.getElementById("mail");
+const msj = document.getElementById("msj");
+const form = document.getElementById("form");
+const errorElement = document.getElementById("error");
+
 
 function carrousel(contenedor){
     contenedor.addEventListener("click", e=> {
@@ -93,3 +99,34 @@ window.addEventListener('scroll', ()=>{
         hideProgress();
     }
 })
+
+form.addEventListener("submit", (e)=>{
+    let mensajes = [];
+
+    const regex = /^[0-9]*$/;
+
+    if((nombre.value.length<3) || (regex.test(nombre.value))){
+        mensajes.push("Ingrese un nombre real")
+    }
+
+    if(mail.value.indexOf("@")==-1){
+        mensajes.push("Ingrese una dirección de correo válida")
+    }
+    if(msj.value == " "){
+        mensajes.push("Debe ingresar un mensaje")
+    }
+    if (mensajes.length>0){
+        e.preventDefault();
+        errorElement.innerText = mensajes.join(", ")
+    }else{
+        
+        console.log(`Nombre: ${nombre.value}`);
+        console.log(`Correo Electrónico: ${mail.value}`);
+        console.log(`Mensjae: ${msj.value}`);
+        alert("Su mensaje fue enviado exitosamente");
+        
+    }
+    
+})
+
+
