@@ -54,7 +54,7 @@
     background-color: gray;
 }
 
-img{
+.hero-container img{
     display: block;
     height: 100%;
     width: 100%;
@@ -83,4 +83,48 @@ img{
 .adelante {
     right: 2%;
     top: calc(100% - 70px);
+}
+
+.experience-container .subtitulo{
+    background-color: var(--primarycolor);
+    color: white;
+    height: 80px;
+    font-size: 36px;
+    display: flex;
+    align-items: center;
+    padding-left: 50px;
+
+}
+
+.experience-container .project{
+    margin: 20px 50px;
+    height: 550px;
+    display: flex;
+    width: 100%;
+    align-content: space-between;
+}
+
+.experience-container .project .content h2{
+    margin-bottom: 50px;
+    font-size: 36px;
+}
+
+.experience-container .project .content p{
+    margin-bottom: 30px;
+    font-size: 24px;
+}
+
+.experience-container .project .content ul{
+    margin-bottom: 20px;
+    font-size: 24px;
+    list-style: none;
+}
+
+
+.experience-container img{
+    width: 750px;
+    height: 500px;
+    position: absolute;
+    right: 5%;
+    
 }
