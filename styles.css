@@ -48,3 +48,39 @@
     padding: 6px 10px;
     cursor: pointer;
 }
+
+.hero-container{
+    height: 700px;
+    background-color: gray;
+}
+
+img{
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+.botones {
+    font-size: 30px;
+    width: 70px;
+    height: 70px;
+    line-height: 70px;
+    border-radius: 50%;
+    background-color: var(--primarycolor);
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    opacity: 60%;
+}
+
+.atras {
+    left: 2%;
+    top: calc(100% - 70px);
+}
+
+.adelante {
+    right: 2%;
+    top: calc(100% - 70px);
+}
