@@ -36,10 +36,21 @@
     display: flex;
     align-items: center;
     list-style: none;
+    color: white;
+    text-decoration: none !important;
+    cursor: pointer;
 }
 
 .menu li{
     margin-left: 20px;
+    text-decoration: none;
+    
+}
+
+.menu li:link , .manu li:visited{
+    text-decoration: none;
+    color: white;
+    
 }
 
 .menu li button{
