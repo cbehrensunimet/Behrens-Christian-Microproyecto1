@@ -3,7 +3,7 @@
 :root{
     --primarycolor: black;
     --dangercolor: red;
-    --successcolor: rgb(49, 218, 49);
+    --successcolor: rgb(94, 208, 94);
     --warningcolor: yellow;
 
 }
@@ -24,12 +24,14 @@
    justify-content: space-between;
    align-items: center;
    color: white;
+   text-decoration: none;
 
 }
 
 .navbar-name{
     font-size: 20px;
     font-weight: bold;
+    text-decoration: none;
 }
 
 .menu{
