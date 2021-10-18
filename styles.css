@@ -227,7 +227,7 @@ form .fcontent{
 }
 .contactme p{
     font-size: 24px;
-    margin: 20px;
+    margin: 20px 50px;
 
 }
 .mycontact{
@@ -239,14 +239,14 @@ form .fcontent{
     display: flex;
     width: 100%;
     align-content: space-around;
-    margin: 20px;
+    margin: 50px;
     list-style: none;
 }
 .mycontact ul li{
-    margin-right: 20px
+    margin-right: 50px
 }
 #error{
     color: var(--dangercolor);
     font-weight: lighter;
-    margin-left: 20px;
+    margin-left: 50px;
 }
